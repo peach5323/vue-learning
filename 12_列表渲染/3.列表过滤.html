@@ -60,7 +60,10 @@
         },
         computed:{
             filPersons(){
-                return this.persons.filter(p => p.name.indexOf(this.keyword) !== -1);
+                return this.person.filter((p) => {
+                    return p.name.indexOf(this.keyword) !== -1
+
+                })
             }
         }
     })
